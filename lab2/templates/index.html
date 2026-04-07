@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Math Solver</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <h1>Chain-of-Thought Math Solver</h1>
+      <p>Enter a multi-step math problem and get a structured solution.</p>
+    </header>
+
+    <section class="card">
+      <form method="post">
+        <label for="problem">Math problem</label>
+        <textarea id="problem" name="problem" rows="6" placeholder="Example: A rectangle has length 12 and width 5. What is its area?">{{ problem }}</textarea>
+
+        <label for="model">Model</label>
+        <input id="model" name="model" type="text" value="{{ model }}" />
+
+        <button type="submit">Solve</button>
+      </form>
+    </section>
+
+    {% if error %}
+      <section class="card error">{{ error }}</section>
+    {% endif %}
+
+    {% if answer %}
+      <section class="card">
+        <h2>Answer</h2>
+        <pre>{{ answer }}</pre>
+      </section>
+    {% endif %}
+  </main>
+</body>
+</html>
