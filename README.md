@@ -195,3 +195,12 @@ python day2_lab1/index_manual.py --pdf path\\to\\product_manual.pdf
 ```bash
 python day2_lab1/query_manual.py --question "How do I reset the device to factory settings?"
 ```
+
+## Day 3 Labs
+
+**Location:** `Labs/Day_3/`
+
+- `Labs/Day_3/Lab_1`: LangGraph ETL notebook with sample e-commerce datasets
+- `Labs/Day_3/Lab_2`: customized sentiment routing app with response suggestions
+- `Labs/Day_3/Lab_3`: moderation workflow with human review and adjusted thresholds
+- `Labs/Day_3/Lab_4`: customized multi-agent research pipeline workspace
