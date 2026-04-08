@@ -1,6 +1,6 @@
 ﻿# ReAct Prompt Generator App
 
-This repo contains four separate labs.
+This repo contains five separate labs/examples.
 
 ## Lab 1: ReAct Prompt Generator
 
@@ -148,4 +148,50 @@ Print the Structured Output prompt:
 
 ```bash
 python lab4/app.py --structured-output
+```
+
+## Day 2 Lab 1: Document Indexing with ChromaDB
+
+**Location:** `day2_lab1/`
+
+### Files
+
+- `day2_lab1/index_manual.py`: Load a PDF product manual, split it into chunks, embed it, and store it in ChromaDB.
+- `day2_lab1/query_manual.py`: Retrieve relevant chunks from ChromaDB and answer questions with grounded context.
+- `day2_lab1/requirements.txt`: Python packages for the Day 2 lab.
+
+### Setup
+
+Install dependencies:
+
+```bash
+pip install -r day2_lab1/requirements.txt
+```
+
+Set your API configuration:
+
+```bash
+setx OPENAI_API_KEY "your_api_key_here"
+```
+
+Optional for OpenRouter or another OpenAI-compatible provider:
+
+```bash
+setx OPENAI_BASE_URL "https://openrouter.ai/api/v1"
+setx OPENAI_MODEL "openai/gpt-4.1-mini"
+setx OPENAI_EMBEDDING_MODEL "text-embedding-3-small"
+```
+
+Restart your terminal after setting environment variables.
+
+### Index a product manual PDF
+
+```bash
+python day2_lab1/index_manual.py --pdf path\\to\\product_manual.pdf
+```
+
+### Query the indexed manual
+
+```bash
+python day2_lab1/query_manual.py --question "How do I reset the device to factory settings?"
 ```
