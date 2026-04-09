@@ -1,0 +1,7 @@
+.venv-d/
+.pip-cache/
+.tmp/
+_assignment_import/
+__pycache__/
+*.pyc
+*.log
